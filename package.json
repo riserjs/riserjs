@@ -1,13 +1,13 @@
 {
     "name": "riser",
-    "version": "0.4.18",
+    "version": "0.4.19",
     "description": "framework",
     "main": "index.js",
     "bin": "./cli/index.js",
     "author": "Siewdass Sf",
     "license": "MIT",
     "scripts": {
-        "build": "npx webpack build --progress --config webpack.build.js"
+        "build": "npx webpack build"
     },
     "dependencies": {
         "@babel/core": "^7.20.12",
