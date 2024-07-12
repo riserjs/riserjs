@@ -2,7 +2,7 @@
 .git
 src
 tsconfig.json
-webpack.build.js
+webpack.config.js
 .eslintrc.json
 .vscode
 LICENCE

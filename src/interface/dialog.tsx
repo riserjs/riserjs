@@ -2,7 +2,7 @@ import { transform } from 'framer-motion'
 import React from 'react'
 import { Theme } from './theme'
 import { Styles } from './types'
-import { Row, Button } from './'
+import { Row, Button } from '.'
 
 export const Dialog = ( props ) => {
 	const { color } = Theme( )

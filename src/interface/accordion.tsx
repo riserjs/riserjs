@@ -1,7 +1,7 @@
 import React, { CSSProperties, useState } from 'react'
 import { Theme } from './theme'
 import { Styles } from './types'
-import { Text } from './'
+import { Text } from '.'
 
 export const Accordion = ( props ) => {
 	const { color, light, dark } = Theme()

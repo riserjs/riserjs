@@ -1,16 +1,10 @@
 const path = require( 'path' )
-const HtmlWebpackPlugin = require( 'html-webpack-plugin' )
 
-module.exports = {
+const config = {
   mode: 'development',
   target: 'web',
-  entry: [ './index.jsx' ],
   resolve: {
     extensions: [ '.ts', '.tsx', '.js', '.jsx', '.css' ],
-  },
-  output: {
-    publicPath: '/',
-    path: path.resolve( __dirname, 'dist' ),
   },
   module: {
     rules: [
@@ -35,25 +29,32 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    new HtmlWebpackPlugin( {
-      //favicon: path.join( __dirname, './src', 'favicon.ico' ),
-      templateContent: '<!DOCTYPE html><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"></head><body><div id="root"></div></body></html>'
-    } )
-  ],
-  stats: {
-    modules: false,
-  },
+  plugins: [],
   performance: {
     hints: false,
     maxEntrypointSize: 512000,
     maxAssetSize: 512000
   },
-  devServer: {
-    host: '0.0.0.0',
-    port: 3000,
-    server: 'http',
-    historyApiFallback: true,
-    allowedHosts: 'all'
-  }
 }
+
+const network = {
+	...config,
+	entry: [ './src/network/index.ts' ],
+	output: {
+		path: path.resolve( __dirname, 'network' ),
+    libraryTarget: 'commonjs2',
+		filename: 'index.js',
+	}
+}
+
+const interface = {
+	...config,
+	entry: [ './src/interface/index.ts' ],
+	output: {
+		path: path.resolve( __dirname, 'interface' ),
+    libraryTarget: 'commonjs2',
+		filename: 'index.js',
+	}
+}
+
+module.exports = [ network, interface ]

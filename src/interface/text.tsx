@@ -1,11 +1,11 @@
-import React, { CSSProperties } from 'react'
+import React from 'react'
 import { Theme } from './theme'
-import { Styles } from './types'
+import { Style } from './types'
 
 export function Text( props ) {
 	const { light, medium, dark, radius, color } = Theme()
 
-	const style: CSSProperties = {
+	const style: Style = {
 		textAlign: props.max ? 'left' : 'center',
 		fontSize: props.size ? props.size : '1rem',
 		color: props.color ? props.color : dark,

@@ -91,3 +91,5 @@ export class Network {
   }
 
 }
+
+export default { Network }
