@@ -8,11 +8,6 @@
     "scripts": {
         "build": "npx webpack build --progress --config webpack.build.js"
     },
-    "peerDependencies": {
-        "react": "^18.3.1",
-        "react-dom": "^18.3.1",
-        "react-router-dom": "^6.23.1"
-    },
     "dependencies": {
         "@babel/core": "^7.20.12",
         "@babel/preset-env": "^7.20.2",
