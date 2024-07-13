@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-const webpack = require( 'webpack' )
-const path = require( 'path' )
-const HtmlWebpackPlugin = require( 'html-webpack-plugin' )
-const webpackDevServer = require( 'webpack-dev-server' )
+import webpack from 'webpack'
+import path from 'path'
+import HtmlWebpackPlugin from 'html-webpack-plugin'
+import webpackDevServer from 'webpack-dev-server'
+import DotEnv from 'dotenv-webpack'
 
-const config = {
+const config: any = {
   mode: process.argv[ process.argv.length - 1 ] == 'dev' ? 'development' : 'production',
   target: 'web',
   entry: [ './index.jsx' ],
@@ -42,7 +43,8 @@ const config = {
     new HtmlWebpackPlugin( {
       //favicon: path.join( __dirname, './src', 'favicon.ico' ),
       templateContent: '<!DOCTYPE html><head><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=0"></head><body><div id="root"></div></body></html>'
-    } )
+    } ),
+    new DotEnv()
   ],
   stats: {
     modules: false,

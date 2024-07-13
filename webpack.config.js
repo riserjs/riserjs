@@ -57,4 +57,14 @@ const interface = {
 	}
 }
 
-module.exports = [ network, interface ]
+const command = {
+	...config,
+	entry: [ './src/command/index.ts' ],
+	output: {
+		path: path.resolve( __dirname, 'command' ),
+    libraryTarget: 'commonjs2',
+		filename: 'index.js',
+	}
+}
+
+module.exports = [ network, interface, command ]
