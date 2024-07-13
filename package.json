@@ -1,6 +1,6 @@
 {
     "name": "riser",
-    "version": "0.4.30",
+    "version": "0.4.31",
     "description": "framework",
     "main": "index.js",
     "bin": "./command/index.js",
