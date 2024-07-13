@@ -1,6 +1,6 @@
 {
     "name": "riser",
-    "version": "0.4.27",
+    "version": "0.4.28",
     "description": "framework",
     "main": "index.js",
     "bin": "./command/index.js",
@@ -45,7 +45,8 @@
         "typescript": "^4.9.4",
         "webpack": "^5.76.0",
         "webpack-cli": "^5.0.1",
-        "webpack-dev-server": "^4.11.1"
+        "webpack-dev-server": "^4.11.1",
+        "webpack-node-externals": "^3.0.0"
     },
     "devDependencies": {}
 }
