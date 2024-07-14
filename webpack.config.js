@@ -58,12 +58,12 @@ const interface = {
 	}
 }
 
-const command = {
+const builder = {
 	...config,
   target: 'node',
-	entry: [ './src/command/index.ts' ],
+	entry: [ './src/builder/index.ts' ],
 	output: {
-		path: path.resolve( __dirname, 'command' ),
+		path: path.resolve( __dirname, 'builder' ),
 		filename: 'index.js',
 	},
   externals: [
@@ -74,4 +74,4 @@ const command = {
   ],
 }
 
-module.exports = [ network, interface, command ]
+module.exports = [ network, interface, builder ]

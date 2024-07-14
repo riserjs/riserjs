@@ -2,6 +2,7 @@ import React, { createElement } from 'react'
 import { createRoot } from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import * as mqtt from 'mqtt/dist/mqtt.min'
+//import ip6 from 'https://cdn.jsdelivr.net/gh/elgs/ip6/ip6.js';
 
 window.React = React
 

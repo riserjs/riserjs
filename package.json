@@ -3,7 +3,7 @@
     "version": "0.4.32",
     "description": "framework",
     "main": "index.js",
-    "bin": "./command/index.js",
+    "bin": "./builder/index.js",
     "author": "Siewdass Sf",
     "license": "MIT",
     "scripts": {

@@ -1,32 +1,23 @@
-import * as mqtt from 'mqtt/dist/mqtt.min'
-//import ip6 from 'https://cdn.jsdelivr.net/gh/elgs/ip6/ip6.js';
-
 export function useNetwork( ) {
   return {
     signin( { email, password, callback }: any ) {
       fetch( 'https://riser.ddns.net:3000/api/signin', {
         method: 'POST',
-        body: JSON.stringify( { email, password, project: this.project } ), 
+        body: JSON.stringify( { email, password, project: ( window as any ).riser.project } ), 
         headers: { 'Content-Type': 'application/json' }
       } )
       .then( res => res.json( ) )
-      .then( res => {
-        localStorage.setItem( 'username', res.data.username )
-        localStorage.setItem( 'password', res.data.password )
-        callback( )
-      } )
+      .then( res => callback( ) )
       .catch( error => console.error( error ) )
     },
     signup( { email, password, callback }: any ) {
       fetch( 'https://riser.ddns.net:3000/api/signup', {
         method: 'POST',
-        body: JSON.stringify( { email, password, project: this.project } ), 
+        body: JSON.stringify( { email, password, project: ( window as any ).riser.project } ), 
         headers: { 'Content-Type': 'application/json' }
       } )
       .then( res => res.json( ) )
-      .then( res => {
-        callback( )
-      } )
+      .then( res => callback( ) )
       .catch( error => console.error( error ) )
     },
     create( { table, index, value }: any ) {
