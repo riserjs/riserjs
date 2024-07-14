@@ -1,6 +1,6 @@
 {
     "name": "riser",
-    "version": "0.4.32",
+    "version": "0.4.33",
     "description": "framework",
     "main": "index.js",
     "bin": "./builder/index.js",
@@ -15,6 +15,7 @@
         "@babel/preset-env": "^7.20.2",
         "@babel/preset-react": "^7.18.6",
         "@babel/preset-typescript": "^7.18.6",
+        "@emotion/is-prop-valid": "^1.2.2",
         "@fortawesome/fontawesome-svg-core": "^6.5.1",
         "@fortawesome/free-brands-svg-icons": "^6.5.1",
         "@fortawesome/free-regular-svg-icons": "^6.5.1",
