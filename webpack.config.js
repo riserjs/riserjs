@@ -3,7 +3,7 @@ const webpack = require( 'webpack' )
 const nodeExternals = require( 'webpack-node-externals' )
 
 const config = {
-  mode: 'development',
+  mode: 'production',
   target: 'web',
   resolve: {
     extensions: [ '.ts', '.tsx', '.js', '.jsx', '.css' ],
@@ -30,12 +30,7 @@ const config = {
         use: [ 'style-loader', 'css-loader' ]
       },
     ],
-  },
-  performance: {
-    hints: false,
-    maxEntrypointSize: 512000,
-    maxAssetSize: 512000
-  },
+  }
 }
 
 const network = {
